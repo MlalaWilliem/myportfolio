@@ -26,18 +26,20 @@
 
         .profile-img {
             width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #00d4ff, #ffffff, #00ff88);
-            margin: 0 auto 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 72px;
-            font-weight: bold;
-            box-shadow: 0 20px 60px rgba(136, 119, 119, 0.5);
-            animation: float 3s ease-in-out infinite;
-            color: #1a1a2e;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #00d4ff, #ffffff, #00ff88);
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 72px;
+    font-weight: bold;
+    box-shadow: 0 20px 60px rgba(136, 119, 119, 0.5);
+    animation: float 3s ease-in-out infinite;
+    color: #1a1a2e;
+    object-fit: cover; /* If it's an actual image */
+    max-width: 100%; /* Prevents overflow */
         }
 
         @keyframes float {
@@ -240,10 +242,12 @@
         }
 
         .contact-item img{
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            overflow: hidden;
+            width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: #ffd700 2px solid;
+    overflow: hidden;
+    max-width: 100%; /* Ensures images scale down */
 
         }
 
@@ -281,6 +285,13 @@
             h2 {
                 font-size: 2em;
             }
+
+            .contact-info {
+        justify-content: flex-start; /* Aligns items to the left */
+        flex-direction: column; /* Stacks items vertically */
+        align-items: flex-start; /* Aligns text to the left */
+        padding-left: 20px; /* Optional: Adds some left padding */
+    }
         }
 
         /* credentials*/
@@ -300,12 +311,12 @@
             align-items: center;
         }
         .credentials-item img{
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: #ffd700 2px solid ;
-            overflow: hidden;
-            margin: 15px; 
+         width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: #ffd700 2px solid;
+    overflow: hidden;
+    max-width: 100%; /* Ensures images scale down */
             
 
         }
@@ -337,15 +348,19 @@
     .skills-grid, .cert-list {
         grid-template-columns: 1fr; /* Stack cards vertically */
     }
-    .contact-info {
-        flex-direction: column;
-        align-items: center;
-    }
+   
     .credentials-item {
         flex-direction: column;
         text-align: center;
     }
     .credentials-item img {
         margin-bottom: 10px;
+    }
+
+    .contact-info {
+        justify-content: flex-start; /* Aligns items to the left */
+        flex-direction: column; /* Stacks items vertically */
+        align-items: flex-start; /* Aligns text to the left */
+        padding-left: 20px; /* Optional: Adds some left padding */
     }
 }
