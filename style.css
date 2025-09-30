@@ -322,3 +322,30 @@
         .credentials-item a:hover {
             color: #00ff88;
         }
+
+        @media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+    .tagline {
+        font-size: 1em;
+    }
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+    .skills-grid, .cert-list {
+        grid-template-columns: 1fr; /* Stack cards vertically */
+    }
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .credentials-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .credentials-item img {
+        margin-bottom: 10px;
+    }
+}
